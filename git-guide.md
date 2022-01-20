@@ -37,7 +37,7 @@
 - pull  
   - Can pull changes made on a remote repo to your local repo  
     - git fetch followed by git merge  
-  - `git pull <remote>'
+  - `git pull <remote>`
 - branch  
   - Can let you create, list, rename and delete branches  
     - Create: `git breanch <new branch name>`  
