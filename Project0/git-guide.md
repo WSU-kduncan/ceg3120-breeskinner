@@ -1,0 +1,65 @@
+# Git Guide  
+## Command Line git
+- status
+  - Shows status of the local repository. This status includes:
+    - number of local commits that have not been synced with remote (GitHub)
+    - list of files in local folder than are NOT being tracked by git
+    - list of files in local folder that have changes that need to be committed
+  - `git status`
+- clone  
+  - Is used to clone an existing reposistory into a newly created directory.  
+    - creates  remote-tracking branches for each branch in the cloned repo
+  - `git clone <url> <directory to clone into>`
+- add  
+  - Prepares current content found in the working tree for the next commit.  
+    - After making changes to the working tree you must use `add` to add new or modified files.  
+    - Will not add ignored files by default
+    - adds content for tracking  
+  - `git add <filename>`
+- rm  
+  - Remove file from index and the filesystem. 
+    - use option --cached if just wanting to remove from the index but keep the file  
+  - `git rm <filename>` or `git rm --cached <filename>`
+- commit  
+  - Create new commit with all the current contents in the index and message specified.  
+    - option -a is all the files that have been modified or deleted  
+    - option -m followed by a message automatically uses that message as the commit message  
+  - `git commit -am "Message to go with commit"`
+- push  
+  - Updates the remote repo to with content from local repo  
+  - `git push`
+- fetch  
+  - Used to download content from a remote repo  
+  - `git fetch <remote repo>`  
+- merge  
+  - Allows you to merge changes made on different branches back to one branch  
+  - `git merge <branch you want to merge their commits from>` but make sure you're on the current branch you want to merge onto  
+- pull  
+  - Can pull changes made on a remote repo to your local repo  
+    - git fetch followed by git merge  
+  - `git pull <remote>`
+- branch  
+  - Can let you create, list, rename and delete branches  
+    - Create: `git breanch <new branch name>`  
+    - List: `git branch`  
+    - Rename: renames current branch `git branch -m <new branch name>`  
+    - Delete: `git branch -d <branch>` or `git branch -D <branch>  
+- checkout  
+  - Lets you navigate between branches created by git branch  
+  - git checkout <branch you want to go to>
+## git files & folders
+- .git folder  
+  - This folder contains all the infprmation that is needed for your project in version control  
+  - Also contains all information about commits  
+  - Is created when you make a new repo with `git init`
+- .gitignore file  
+  - Contains all of the files to be ignored from tracking by Git  
+  - Add files you want to be ignored into file named `.gitignore` by relative path on a new line
+## GitHub  
+- Pull Requests  
+  - Allows you to tell others about about changes on a branch in a GitHub repo  
+  - Can allow you to discuss changes with others before merging to main branch  
+  - Can open a pull request right on GitHub  
+- SSH authentication to repositories  
+  - Allows you a secure channel to GitHub over an unsecure network  
+  - Generate you key pair and then add public key to GitHub
