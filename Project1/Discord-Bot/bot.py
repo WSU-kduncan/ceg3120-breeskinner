@@ -29,25 +29,16 @@ async def on_message(message):
 	if message.author == client.user:
 		return
 
-	brooklyn_99_quotes = [
-		'I\'m the human form of the 💯 emoji.',
-		'Bingpot!',
-		(
-			'Cool. Cool cool cool cool cool cool cool, '
-			'no doubt no doubt no doubt no doubt.'
-		),
+
+	barneyStinson_quotes = [
+		'It\'s gonna be legen-.... wait for it.... DARY!',
+		'When I\'m sad, I just stop being sad and be awesome instead!',
+		'In my body, where the shame gland should be there\'s a second awesome gland. True story.',
+		'Challenge accepted.',
 	]
 
-	hitchhiker_quotes = [
-		'There is an art, it says, or rather, a knack to flying. The knack lies in learning how to throw yourself at the ground and miss.',
-		'It is a mistake to think you can solve any major problems just with potatoes.',
-		'In the beginning the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move.',
-		'A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools.',
-	]
-
-	if message.content == 'towel!':
-		#response = random.choice(brooklyn_99_quotes)
-		response = random.choice(hitchhiker_quotes)
+	if message.content == 'hello!':
+		response = random.choice(barneyStinson_quotes)
 		await message.channel.send(response)
 
 client.run(TOKEN)
