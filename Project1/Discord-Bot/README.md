@@ -11,4 +11,4 @@
 ## Usage  
 When the command "hello!" is typed, the bot will respond with 1 of 4 different Barney Stinison quotes from the show How I Met Your Mother.  
 ## Research  
-From my research, you can run the process in the background and disown it to detach it from the shell so when the shell exits the process is still running. Another way to do this is use a Cloud so that you can host your bot 24/7.
+From my research, you can run the process in the background and disown it to detach it from the shell so when the shell exits the process is still running. I think this will work because it detaches the process from the current shell. I also tried it but I'm not sure if my computer would have to be on 24/7 for it to continue.  Another way to do this is use a Cloud so that you can host your bot 24/7. I think this will work because it is basically using a remote computer to run the process so it is able to be on all the time. 
