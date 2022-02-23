@@ -18,10 +18,10 @@ Mappings:
   AWSInstanceType2Arch:  # Supported architectures (x64bit only)
     t2.micro:
       Arch: HVM64
-  AWSRegionUbuntu: # AMI for Amazon Linux 2 server in each supported region 
+  AWSRegionUbuntu: # AMI for Ubuntu server in each supported region 
     us-east-1:   # N. Virginia
       PV64: NOT_SUPPORTED
-      HVM64: ami-033b95fb8079dc481
+      HVM64: aami-04505e74c0741db8d
       HVMG2: NOT_SUPPORTED
 Resources:
   VPC:
@@ -131,11 +131,11 @@ Resources:
         Fn::Base64:
           !Sub |
             #!/bin/bash -xe
+            hostnamectl set-hostname skinner && \
             apt-get update && \
             apt-get install -y \
               git \
               python3 \
-              pip3 \
+              python-pip3 \
               sl && \
-            hostnamectl set-hostname skinner-amlin.localdomain && \
             reboot
