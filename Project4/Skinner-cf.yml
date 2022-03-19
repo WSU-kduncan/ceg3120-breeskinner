@@ -261,5 +261,5 @@ Resources:
             sudo apt-get install -y apache2 && \
             apt-get install -y git && \
             # TODO give it a hostname - hostnamectl  && \
-            hostnamectl set-hostname webserv2 && \
+            sudo hostnamectl set-hostname webserv2 && \
             reboot
